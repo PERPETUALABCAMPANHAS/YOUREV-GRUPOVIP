@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #010609;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+    /* Aspect ratio padrão (Desktop 16:9) */
+    aspect-ratio: 16 / 9;
+}
+
+.bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 
+  Estilos padrão do botão (Desktop)
+*/
+.clickable-button {
+    position: absolute;
+    left: 56.6%;
+    top: 70.3%;
+    width: 37.4%;
+    height: 8%;
+    border-radius: 4vw;
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.hover-effect {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.2s ease;
+}
+
+.clickable-button:hover .hover-effect {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.clickable-button:active .hover-effect {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* 
+  Estilos Mobile (Quando a tela for menor que 768px)
+*/
+@media (max-width: 768px) {
+    .page-container {
+        /* Proporção 9:16 (Story do Instagram) */
+        aspect-ratio: 9 / 16;
+    }
+    
+    .clickable-button {
+        left: 4.5%;
+        width: 91%;
+        top: 84.5%;
+        height: 6.8%;
+        border-radius: 4vw; 
+    }
+}
